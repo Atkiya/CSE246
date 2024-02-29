@@ -5,7 +5,7 @@ using namespace std;
 
 int a[MAX];
 
-void bubble_sort(int s,int e ){
+void bubble_sort(int n){
     for(int i=0;i<=n-1;i++){
         bool swapped=false;
         for(int j=0;j<=n-i-1;j++){
@@ -27,7 +27,7 @@ int main(){
 
     for(int i=0;i<n;i++)cin>>a[i];
 
-    bubble_sort(0,n-1);
+    bubble_sort(n-1);
 
     for(int i=0;i<n;i++)cout<<a[i]<<' ';
     return 0;
