@@ -6,15 +6,15 @@ using namespace std;
 int a[MAX];
 
 void bubble_sort(int s,int e ){
-    for(int i=s;i<=e-1;i++){
-        int swaps=0;
-        for(int j=i+1;j<=e;j++){
-            if(a[i]>a[j]){
-                swap(a[i],a[j]);
-                swaps=1;
+    for(int i=0;i<=n-1;i++){
+        bool swapped=false;
+        for(int j=0;j<=n-i-1;j++){
+            if(a[j]>a[j+1]){
+                swap(a[j],a[j+1]);
+                swapped=true;
             }
         }
-        if(swaps==0){
+        if(swaps==false){
             return;
         }
     }
