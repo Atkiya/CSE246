@@ -5,6 +5,7 @@ vector<pair<int,int>>g[1007];
 int dist[1007];
 int nodes,edges;
 map<int,int>par;
+int vis[1007];
 
 void print(int i){
     if(par[i]==0){
@@ -23,6 +24,8 @@ void dijkstra(int src){
         auto p=pq.top();
         int u=p.second;
         pq.pop();
+        if(vis[u])continue;
+        vis[u]=1;
         for(auto x:g[u]){
             int w=x.second;
             int v=x.first;
