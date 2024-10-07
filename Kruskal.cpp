@@ -15,6 +15,7 @@ int find(int u,int *par){
 void merge(int x,int y,int *par,int *rank){
     x=find(x,par);
     y=find(y,par);
+    if(x==y)return;
     if(rank[x]>rank[y]){
         par[y]=x;
     }
